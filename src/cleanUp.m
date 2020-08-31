@@ -22,7 +22,7 @@ function cleanUp()
     end
 
     if ~ismac
-        % remove PsychDebugWindowConfiguration
+        % Remove PsychDebugWindowConfiguration
         clear Screen;
     end
 
