@@ -1,5 +1,6 @@
 function responseEvents = collectAndSaveResponses(cfg, logFile, experimentStart)
 
+    target = cfg.target;
     responseEvents = getResponse('check', cfg.keyboard.responseBox, cfg);
 
     if isfield(responseEvents(1), 'onset') && ~isempty(responseEvents(1).onset)
@@ -11,6 +12,8 @@ function responseEvents = collectAndSaveResponses(cfg, logFile, experimentStart)
 
         responseEvents(1).fileID = logFile.fileID;
         responseEvents(1).extraColumns = logFile.extraColumns;
+        responseEvents(1).target = sum(target);
+        
         saveEventsFile('save', cfg, responseEvents);
 
     end
