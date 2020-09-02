@@ -111,7 +111,7 @@ end
 function initDebug(cfg)
 
     % init PTB with different options in concordance to the debug Parameters
-    Screen('Preference', 'SkipSyncTests', 0);
+    Screen('Preference', 'SkipSyncTests', 1);
     if cfg.debug.do
 
         Screen('Preference', 'SkipSyncTests', 2);
